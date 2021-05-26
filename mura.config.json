@@ -204,6 +204,10 @@
 					{"type":"fieldlist","name":"fields","label":"Display List"}
 				]
 			},
+			"mPowerSidebar":{
+				"name":"mPower Sidebar",
+				"contenttypes":""
+			},
 			"Cards":{
 				"name":"Cards",
 				"contenttypes":"",

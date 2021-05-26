@@ -2,8 +2,10 @@ import React from 'react';
 import Head from 'next/head';
 import ErrorPage from 'next/error';
 import { EditLayout, MainLayout, setMuraConfig, MuraJSRefPlaceholder, getMuraProps, getRootPath, getSiteName } from '@murasoftware/next-core';
+import Header from '../components/Header';
 import Body from '../components/Body';
 import muraConfig from 'mura.config';
+import Sidebar from '@components/Sidebar';
 
 export async function getServerSideProps(context) {
   try {
@@ -83,6 +85,8 @@ export default function Page(props) {
           </Head>
           <div dangerouslySetInnerHTML={{__html:props.codeblocks.header}}/>
           <div dangerouslySetInnerHTML={{__html:props.codeblocks.bodystart}}/>
+          <Header />
+          <Sidebar />
           <Body
             content={content}
             moduleStyleData={moduleStyleData}

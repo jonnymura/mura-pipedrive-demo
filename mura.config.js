@@ -13,6 +13,7 @@ import { CTAButton } from '@murasoftware/next-modules-bs4';
 import { PrivacyTools } from '@murasoftware/next-modules-bs4';
 // import { MatrixSelector, getMatrixSelectorDynamicProps } from '@murasoftware/next-modules-bs4';
 import { MatrixSelector, getMatrixSelectorDynamicProps } from 'src/mura/react/UI';
+import Sidebar from 'src/components/Sidebar';
 //import Login from '@mura/react/UI/Login';
 
 import { CollectionLayout,getCollectionLayoutQueryProps as getCollectionLayoutProps } from '@murasoftware/next-modules-bs4';
@@ -141,11 +142,17 @@ let moduleRegistry = [
     getQueryProps: getCollectionLayoutProps,
     excludeFromClient: true
   },
+  {
+    name: 'mPowerSidebar',
+    component: Sidebar,
+    getDynamicProps: getPrimaryNavDynamicProps
+  },
   /*{
     name: 'DefaultLayout',
     component: DefaultLayout,
     excludeFromClient: true
   },*/
+  
   {
     name: 'PrimaryNav',
     component: PrimaryNav,
